@@ -52,7 +52,7 @@ public class MainActivity extends Activity implements Runnable, LlamaCallback {
         });
   }
 
-  private static String[] listLocalFile(String path, String suffix) {
+  static String[] listLocalFile(String path, String suffix) {
     File directory = new File(path);
     if (directory.exists() && directory.isDirectory()) {
       File[] files = directory.listFiles((dir, name) -> name.toLowerCase().endsWith(suffix));
